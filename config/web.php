@@ -38,14 +38,12 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
     ],
     'params' => $params,
 ];
@@ -61,6 +59,10 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         'allowedIPs' => ['127.0.0.1', '::1', '192.168.*.*'], // крайний член - маска, может быть любой
+    ];    
+    $config['bootstrap'][] = 'admin';
+    $config['modules']['admin'] = [
+        'class' => 'app\modules\admin\Module'   
     ];
 }
 

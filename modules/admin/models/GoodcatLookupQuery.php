@@ -1,13 +1,13 @@
 <?php
 
-namespace app\models;
+namespace app\modules\admin\models;
 
 /**
- * This is the ActiveQuery class for [[Users]].
+ * This is the ActiveQuery class for [[GoodcatLookup]].
  *
- * @see Users
+ * @see GoodcatLookup
  */
-class UsersQuery extends \yii\db\ActiveQuery
+class GoodcatLookupQuery extends \yii\db\ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +16,7 @@ class UsersQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return Users[]|array
+     * @return GoodcatLookup[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class UsersQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return Users|array|null
+     * @return GoodcatLookup|array|null
      */
     public function one($db = null)
     {
